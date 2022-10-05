@@ -1,7 +1,7 @@
 import CedroAuthenticationDomain
 
-public class RemoteGetEnvironment: GetEnvironment, CedroHttpRequest {
-    public typealias Response = EnvironmentModel
+public class RemoteGetLoginWebSocket: GetLoginWebSocket, CedroHttpRequest {
+    public typealias Response = LoginWebSocketModel
     public var httpClient: CedroHttpClient
     public var httpEndpoint: CedroHttpEndpoint
     
@@ -10,7 +10,7 @@ public class RemoteGetEnvironment: GetEnvironment, CedroHttpRequest {
         self.httpEndpoint = httpEndpoint
     }
     
-    public func get() async -> GetEnvironment.Result {
+    public func get() async -> GetLoginWebSocket.Result {
         let result = await httpClient.request(self)
         switch result {
         case .success(let response): return .success(response)
