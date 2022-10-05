@@ -5,7 +5,7 @@ public final class EnvironmentController {
     static let shared = EnvironmentController()
     private var response: ((GetEnvironment.Result) -> Void)?
     private lazy var presenter = { makeEnvironmentPresenter(delegate: WeakProxy(self)) }()
-    public var environment: EnvironmentModel? { return presenter.environmentResponse }
+    public var model: EnvironmentModel? { return presenter.environmentResponse }
     
     public func get(response: ((GetEnvironment.Result) -> Void)?) {
         self.response = response

@@ -1,5 +1,5 @@
 import Foundation
 
 func makeEnvironmentController() -> EnvironmentController {
-    return EnvironmentController()
+    return EnvironmentController.shared
 }
