@@ -1,11 +1,11 @@
 import Foundation
 
 public struct EnvironmentModel: CedroModel {
-    public let webfeeder: EnvironmentWebfeederModel?
-    public let apiUrls: EnvironmentApiUrlsModel?
-    public let paths: EnvironmentPathsModel?
-    public let systemVariables: EnvironmentSystemVariablesModel?
-    public let afterLoginMessage: EnvironmentAfterLoginMessageModel?
+    public var webfeeder: EnvironmentWebfeederModel?
+    public var apiUrls: EnvironmentApiUrlsModel?
+    public var paths: EnvironmentPathsModel?
+    public var systemVariables: EnvironmentSystemVariablesModel?
+    public var afterLoginMessage: EnvironmentAfterLoginMessageModel?
 
     enum CodingKeys: String, CodingKey {
         case webfeeder = "WEBFEEDER"
@@ -18,7 +18,7 @@ public struct EnvironmentModel: CedroModel {
 
 // MARK: - AfterLoginMessage
 public struct EnvironmentAfterLoginMessageModel: CedroModel {
-    public let title, content, effectiveDate: String?
+    public var title, content, effectiveDate: String?
 
     enum CodingKeys: String, CodingKey {
         case title = "TITLE"
@@ -29,12 +29,12 @@ public struct EnvironmentAfterLoginMessageModel: CedroModel {
 
 // MARK: - ApiUrls
 public struct EnvironmentApiUrlsModel: CedroModel {
-    public let webfeederRestApiFacade, workspaceRestApiFacade: String?
-    public let webfeederRestApiWso2, workspaceRestApiWso2, cedroAccountApiWso2, webfeederRestApiAdapterAuth: String?
-    public let webfeederRestApiAdapterWso2, workspaceRestApiAdapter, eletronicSignatureApiAdapter, termSuitabilityApiAdapter: String?
-    public let saveChartApi: String?
-    public let userApi, storeUrl, fastMarket, addressViaCepApi: String?
-    public let redirectLogout, redirectLogin: String?
+    public var webfeederRestApiFacade, workspaceRestApiFacade: String?
+    public var webfeederRestApiWso2, workspaceRestApiWso2, cedroAccountApiWso2, webfeederRestApiAdapterAuth: String?
+    public var webfeederRestApiAdapterWso2, workspaceRestApiAdapter, eletronicSignatureApiAdapter, termSuitabilityApiAdapter: String?
+    public var saveChartApi: String?
+    public var userApi, storeUrl, fastMarket, addressViaCepApi: String?
+    public var redirectLogout, redirectLogin: String?
 
     enum CodingKeys: String, CodingKey {
         case webfeederRestApiFacade = "WEBFEEDER_REST_API_FACADE"
@@ -59,8 +59,8 @@ public struct EnvironmentApiUrlsModel: CedroModel {
 
 // MARK: - Paths
 public struct EnvironmentPathsModel: CedroModel {
-    public let webfeederAdapter, tradingviewAdapter, webfeederWso2, tradingviewWso2: String?
-    public let userIdentityWso2, portalBusinessWso2, registrationSystemSuitability: String?
+    public var webfeederAdapter, tradingviewAdapter, webfeederWso2, tradingviewWso2: String?
+    public var userIdentityWso2, portalBusinessWso2, registrationSystemSuitability: String?
 
     enum CodingKeys: String, CodingKey {
         case webfeederAdapter = "WEBFEEDER_ADAPTER"
@@ -75,9 +75,9 @@ public struct EnvironmentPathsModel: CedroModel {
 
 // MARK: - SystemVariables
 public struct EnvironmentSystemVariablesModel: CedroModel {
-    public let orderHistoryFilterRange, extractFinancialFilterRange, modalNewsFilterRange: Int?
-    public let googleTagManagerID, brokerageValue, newsAgency: String?
-    public let registerIdentity: Bool?
+    public var orderHistoryFilterRange, extractFinancialFilterRange, modalNewsFilterRange: Int?
+    public var googleTagManagerID, brokerageValue, newsAgency: String?
+    public var registerIdentity: Bool?
 
     enum CodingKeys: String, CodingKey {
         case orderHistoryFilterRange = "ORDER_HISTORY_FILTER_RANGE"
@@ -92,7 +92,7 @@ public struct EnvironmentSystemVariablesModel: CedroModel {
 
 // MARK: - Webfeeder
 public struct EnvironmentWebfeederModel: CedroModel {
-    public let urlWebFeederFacade, urlWebFeederWso2, urlWebFeederAdapter: String?
+    public var urlWebFeederFacade, urlWebFeederWso2, urlWebFeederAdapter: String?
 
     enum CodingKeys: String, CodingKey {
         case urlWebFeederFacade = "URL_WEB_FEEDER_FACADE"
