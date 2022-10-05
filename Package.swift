@@ -8,7 +8,8 @@ let package = Package(
     platforms: [
         .iOS(.v14),
         .macOS(.v12),
-        .macCatalyst(.v15)
+        .macCatalyst(.v15),
+        .tvOS(.v14)
     ],
     products: [
         .library(
@@ -42,12 +43,6 @@ let package = Package(
             name: "CedroAuthenticationPresentation",
             dependencies: [
                 "CedroAuthenticationDomain",
-                .product(name: "RefdsCore", package: "refds-core")]),
-        .executableTarget(
-            name: "Example",
-            dependencies: ["CedroAuthentication"]),
-        .testTarget(
-            name: "CedroAuthenticationTests",
-            dependencies: ["CedroAuthentication"]),
+                .product(name: "RefdsCore", package: "refds-core")])
     ]
 )
