@@ -17,7 +17,7 @@ let package = Package(
             targets: ["CedroAuthentication"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/rafaelesantos/refds-core.git", branch: "main")
+        .package(url: "https://github.com/refdsenterprise/refds-core.git", branch: "main")
     ],
     targets: [
         .target(
